@@ -29,6 +29,7 @@ pipeline {
             }
         }
 
+
         stage('Image Push') {
             steps {
                 sh "docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${REPO_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
