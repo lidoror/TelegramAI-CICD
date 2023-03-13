@@ -78,7 +78,7 @@ class YoutubeBot(Bot):
                     }
                 )
                 logger.info(f'msg {response.get("MessageId")} has been sent to queue')
-                self.send_text('thank you for your massage the server processing it23....')
+                self.send_text('thank you for your massage the server processing it....')
             except ClientError as error:
                 logger.error(error)
                 self.send_text('Something went wrong, please try again...')
