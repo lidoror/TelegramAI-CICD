@@ -83,7 +83,7 @@ class YoutubeBot(Bot):
 
 
 
-                self.send_text('message passed to queue....')
+                self.send_text('message handled....')
 
             except ClientError as error:
                 logger.error(error)
