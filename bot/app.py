@@ -83,7 +83,7 @@ class YoutubeBot(Bot):
 
 
 
-                self.send_text('Hi, your message is being proccecd as we speak....')
+                self.send_text('message passed to queue....')
 
             except ClientError as error:
                 logger.error(error)
