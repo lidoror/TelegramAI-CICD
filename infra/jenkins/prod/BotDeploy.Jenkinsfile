@@ -20,7 +20,7 @@ pipeline {
     }
 
     parameters {
-        string(name: 'IMAGE_NAME')
+        string(name: 'BOT_IMAGE_NAME')
     }
 
     stages {

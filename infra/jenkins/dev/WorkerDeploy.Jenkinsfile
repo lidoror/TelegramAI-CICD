@@ -8,6 +8,7 @@ pipeline {
     }
 
     environment {
+        //for the k8s_deployment_yaml_customize.py script
         APP_NAME = "worker"
         APP_ENV = "dev"
         K8S_DEPLOYMENT_FILE = "infra/k8s/worker_to_deploy.yaml"

@@ -12,7 +12,7 @@ pipeline {
     }
 
         parameters {
-        string(name: 'IMAGE_NAME')
+        string(name: 'WORKER_IMAGE_NAME')
     }
     environment {
         APP_NAME = "worker"
