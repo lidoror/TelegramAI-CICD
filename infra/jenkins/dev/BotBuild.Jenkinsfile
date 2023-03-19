@@ -7,8 +7,8 @@ pipeline {
     }
 
     options {
-        timestamps()
         timeout(time: 30, unit: 'MINUTES')
+        timestamps()
     }
 
     environment {
@@ -28,6 +28,7 @@ pipeline {
                 sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} -f bot/Dockerfile ."
             }
         }
+
 
         stage('Image Push') {
             steps {

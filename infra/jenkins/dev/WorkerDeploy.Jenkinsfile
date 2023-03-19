@@ -8,6 +8,7 @@ pipeline {
     }
 
     environment {
+        //for the k8s_deployment_yaml_customize.py script
         APP_NAME = "worker"
         APP_ENV = "dev"
         K8S_DEPLOYMENT_FILE = "infra/k8s/worker_to_deploy.yaml"
@@ -35,7 +36,7 @@ pipeline {
                 ]) {
                     sh '''
                     # apply the configurations to k8s cluster
-                    kubectl apply --kubeconfig ${KUBECONFIG} -f ${K8S_DEPLOYMENT_FILE} --namespace=dev
+                    kubectl apply --kubeconfig ${KUBECONFIG} -f ${K8S_DEPLOYMENT_FILE} -n dev
                     '''
                 }
             }

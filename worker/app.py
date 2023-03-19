@@ -1,10 +1,11 @@
 import json
 import time
+import os
 import boto3
 from botocore.exceptions import ClientError
 from loguru import logger
 from utils import search_download_youtube_video
-import os
+
 
 env = os.environ['ENV']
 with open(f'config-{env}.json') as f:
@@ -20,7 +21,6 @@ s3 = boto3.client("s3")
 
 def process_msg(msg):
     videos = search_download_youtube_video(msg)
-
     for video in videos:
         name = video['filename']
         s3.upload_file(name, config.get('videos_bucket'), name)
